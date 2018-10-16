@@ -59,6 +59,9 @@ class StdOutListener(StreamListener):
                     text = data['extended_tweet']['full_text']
                 else:
                     text = data['text']
+                    
+                if '#nitocris83' in text:
+                    continue
 
                 for url in data['entities']['urls']:
                     if url['expanded_url'] is None:
